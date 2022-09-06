@@ -51,6 +51,9 @@ gem 'sass', '~> 3.7', '>= 3.7.4'
 # Use FontAwesome
 gem "font-awesome-rails"
 
+# Use Faker for template data
+gem 'faker', '~> 1.6', '>= 1.6.6'
+
 # Use devise for authentication
 gem 'devise'
 
