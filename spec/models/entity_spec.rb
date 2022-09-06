@@ -27,7 +27,7 @@ RSpec.describe Entity, type: :model do
   context 'associations' do
     it 'has many groups' do
       assc = described_class.reflect_on_association(:groups)
-      expect(assc.macro).to eq :has_many
+      expect(assc.macro).to eq :has_and_belongs_to_many
     end
     it 'belong_to user' do
       assc = described_class.reflect_on_association(:user)
