@@ -46,7 +46,16 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem 'sass', '~> 3.7', '>= 3.7.4'
+
+# Use FontAwesome
+gem 'font-awesome-rails'
+
+# Use Faker for template data
+gem 'faker', '~> 1.6', '>= 1.6.6'
+
+# Use devise for authentication
+gem 'devise'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -54,6 +63,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '>= 3.9.0'
 end
 
 group :development do
