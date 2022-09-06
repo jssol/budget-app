@@ -46,7 +46,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+gem 'sass', '~> 3.7', '>= 3.7.4'
+
+# Use FontAwesome
+gem "font-awesome-rails"
 
 # Use devise for authentication
 gem 'devise'
