@@ -12,7 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *=require font-awesome
+ *= require font-awesome
+ *= require design
  */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -24,6 +25,14 @@
 * 1. Correct the line height in all browsers.
 * 2. Prevent adjustments of font size after orientation changes in iOS.
 */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   line-height: 1.15;
@@ -43,6 +52,9 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Proxima Nova Thin', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 /**
@@ -60,6 +72,7 @@ main {
 
 h1 {
   font-size: 2em;
+  font-weight: 700;
   margin: 0.67em 0;
 }
 
@@ -421,4 +434,34 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Proxima Nova Bold', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--title-color);
+}
+
+.flash-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
 }

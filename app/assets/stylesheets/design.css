@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
+
+:root {
+  --primary-color: #3778c2;
+  --secondary-color: #5fb523;
+  --title-color: #434b54;
+  --text-color: #555b62;
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url('./Proxima_Nova_Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url('./Proxima_Nova_Thin.otf') format('opentype');
+}
