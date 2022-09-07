@@ -133,6 +133,7 @@ button {
   padding: 0.5rem;
   border: none;
   box-shadow: none;
+  font-family: 'Promixa Nova Bold', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /**
@@ -430,6 +431,7 @@ details {
 summary {
   display: list-item;
 }
+
 /* Misc
   ========================================================================== */
 

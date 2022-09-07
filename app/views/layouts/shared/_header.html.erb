@@ -10,6 +10,18 @@
       <% end %>
     <% end %>
   </section>
-  <p>Title</p>
-  <section>Next</section>
+  <p class="page-title">
+    <% if current_page? new_user_session_path %>
+      LOGIN
+    <% elsif current_page? new_user_registration_path %>
+      REGISTER
+    <% end %>
+  </p>
+  <section>
+    <% if current_page? new_user_session_path %>
+      <button type="submit" form="new_user" value="Log In">Log In</button>
+    <% elsif current_page? new_user_registration_path %>
+      REGISTER
+    <% end %>
+  </section>
 </header>

@@ -8,6 +8,7 @@
   background-color: var(--primary-color);
   color: #fff;
   font-size: 1.35em;
+  position: relative;
 }
 
 .hamburger-button {
@@ -17,4 +18,10 @@
 
 .nav-open .hamburger {
   transition: all 150ms ease-in-out;
+}
+
+.page-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }

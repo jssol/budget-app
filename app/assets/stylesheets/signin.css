@@ -1,0 +1,67 @@
+#new_user {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+.field::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20%;
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-color);
+}
+
+.field + .field {
+  margin-top: 0.175rem;
+}
+
+.checkbox {
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 1rem !important;
+}
+
+.checkbox::after {
+  display: none;
+}
+
+.field-input {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.75rem;
+}
+
+.field-input:focus {
+  outline: none;
+}
+
+.field:focus-within::after {
+  width: calc(100% - 0.75rem);
+  height: 2px;
+  transition: all 350ms ease-in-out;
+}
+
+.shared-links {
+  width: fit-content;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  margin-top: 1rem;
+  align-self: center;
+  text-decoration: underline;
+}
