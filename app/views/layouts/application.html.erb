@@ -12,8 +12,10 @@
 
   <body class="body">
     <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
+      <%= content_tag :div, msg, class: "#{name} flash-popup" %>
     <% end -%>
-    <%= yield %>
+    <main class="main">
+      <%= yield %>
+    </main>
   </body>
 </html>
