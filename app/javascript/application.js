@@ -4,7 +4,6 @@ import anime from './modules/animejs/lib/anime.es.js'
 
 anime({
   targets: "#test",
-  translateX: 250,
   rotate: "1turn",
   backgroundColor: "#FFF",
   duration: 800,
