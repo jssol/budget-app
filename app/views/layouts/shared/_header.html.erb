@@ -1,6 +1,13 @@
 <header class="header">
   <section>
-    <% if %>
+    <% if current_page? categories_path || transactions_path %>
+    <button type="button" class="hamburger-button">
+      <%= fa_icon "bars", class: "hamburger" %>
+    </button>
+    <% else %>
+      <%= link_to :back do %>
+        <%= fa_icon "chevron-left" %>
+      <% end %>
     <% end %>
   </section>
   <p>Title</p>
