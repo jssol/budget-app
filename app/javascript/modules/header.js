@@ -1,6 +1,7 @@
 const hamburgerButton = document.querySelector('.hamburger-button');
 const hamburger = document.querySelector('.hamburger');
 const page = document.documentElement;
+const pageBody = document.getElementsByClassName('body')[0];
 
 hamburgerButton.addEventListener('click', () => {
   page.classList.toggle('nav-open');

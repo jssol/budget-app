@@ -1,6 +1,6 @@
 <header class="header">
   <section>
-    <% if current_page? categories_path || transactions_path %>
+    <% if current_page? user_groups_path || user_group_entities_path %>
     <button type="button" class="hamburger-button">
       <%= fa_icon "bars", class: "hamburger" %>
     </button>
@@ -21,7 +21,7 @@
     <% if current_page? new_user_session_path %>
       <button type="submit" form="new_user" value="Log In">Log In</button>
     <% elsif current_page? new_user_registration_path %>
-      REGISTER
+      <button type="submit" form="new_user" value="Next">Next</button>
     <% end %>
   </section>
 </header>

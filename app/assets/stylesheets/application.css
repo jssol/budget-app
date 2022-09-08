@@ -55,6 +55,7 @@ body {
   font-family: 'Proxima Nova Thin', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   color: var(--text-color);
+  background-color: #f3f3f3;
 }
 
 /**
@@ -254,6 +255,10 @@ button,
 input {
   /* 1 */
   overflow: visible;
+}
+
+input {
+  background-color: #fff !important;
 }
 
 /**
@@ -470,13 +475,25 @@ template {
 }
 
 .flash-popup {
+  width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   padding: 1rem;
+  border: 2px solid;
+  color: var(--primary-color);
+  border-color: currentColor;
+  border-left: none;
+  border-right: none;
+}
+
+#flash-closer {
+  color: inherit;
+  font-size: 1.5rem;
 }
