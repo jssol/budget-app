@@ -1,1 +1,10 @@
-<h1>Groups index page</h1>
+<section class="groups-index-page">
+  <section class= "groups-container">
+    <%= @groups.each do |group| %>
+      <%= link_to user_group_path(group), class: "user-group" do %>
+        <%= group.name %>
+      <% end %>
+    <% end %>
+  </section>
+  <%= link_to "Add new group", new_user_group_path, class: "add-group-button" %>
+</section>

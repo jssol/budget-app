@@ -258,7 +258,7 @@ input {
 }
 
 input {
-  background-color: #fff !important;
+  background-color: #fff;
 }
 
 /**
@@ -491,9 +491,4 @@ template {
   border-color: currentColor;
   border-left: none;
   border-right: none;
-}
-
-#flash-closer {
-  color: inherit;
-  font-size: 1.5rem;
 }

@@ -15,6 +15,10 @@
       LOGIN
     <% elsif current_page? new_user_registration_path %>
       REGISTER
+    <% elsif current_page? user_groups_path %>
+      GROUPS
+    <% elsif current_page? new_user_group_path %>
+      ADD GROUP
     <% end %>
   </p>
   <section>
@@ -22,6 +26,8 @@
       <button type="submit" form="new_user" value="Log In">Log In</button>
     <% elsif current_page? new_user_registration_path %>
       <button type="submit" form="new_user" value="Next">Next</button>
+    <% elsif current_page? user_groups_path || user_group_entities_path %>
+      <%= fa_icon "search" %>
     <% end %>
   </section>
 </header>
