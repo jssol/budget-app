@@ -2,3 +2,5 @@
 import './modules/homepage'
 import './modules/header';
 // import anime from './modules/animejs/lib/anime.es.js'
+import "trix"
+import "@rails/actiontext"
