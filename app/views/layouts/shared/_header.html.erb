@@ -5,6 +5,10 @@
         <button type="button" class="hamburger-button">
           <%= fa_icon "bars", class: "hamburger" %>
         </button>
+      <% elsif current_page? new_user_group_path %>
+        <%= link_to :back do %>
+          <%= fa_icon "chevron-left" %>
+        <% end %>
       <% elsif current_page? user_group_entities_path %>
         <button type="button" class="hamburger-button">
           <%= fa_icon "bars", class: "hamburger" %>
@@ -59,6 +63,8 @@
     <% elsif current_page? new_user_registration_path %>
       <button type="submit" form="new_user" value="Next">Next</button>
     <% elsif current_page? user_groups_path %>
+      <%= fa_icon "search", class: "pointer" %>
+    <% elsif current_page? new_user_group_path %>
       <%= fa_icon "search", class: "pointer" %>
     <% elsif current_page? user_group_entities_path %>
       <%= fa_icon "search", class: "pointer" %>
