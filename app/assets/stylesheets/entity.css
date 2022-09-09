@@ -36,7 +36,7 @@
   padding-bottom: 0.25rem;
 }
 
-.entities-nav-list-item::after {
+.active::after {
   position: absolute;
   content: '';
   width: 5px;
