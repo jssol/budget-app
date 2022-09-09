@@ -8,6 +8,18 @@
       <button type="button" class="hamburger-button">
         <%= fa_icon "bars", class: "hamburger" %>
       </button>
+    <% elsif current_page? recent_expenses_path %>
+      <button type="button" class="hamburger-button">
+        <%= fa_icon "bars", class: "hamburger" %>
+      </button>
+    <% elsif current_page? ancient_expenses_path %>
+      <button type="button" class="hamburger-button">
+        <%= fa_icon "bars", class: "hamburger" %>
+      </button>
+    <% elsif current_page? expensive_expenses_path %>
+      <button type="button" class="hamburger-button">
+        <%= fa_icon "bars", class: "hamburger" %>
+      </button>
     <% else %>
       <%= link_to :back do %>
         <%= fa_icon "chevron-left" %>
@@ -24,11 +36,15 @@
     <% elsif current_page? new_user_group_path %>
       ADD GROUP
     <% elsif current_page? user_group_entities_path %>
-      TRANSACTIONS
+      EXPENSES
+    <% elsif current_page? recent_expenses_path %>
+      EXPENSES
+    <% elsif current_page? ancient_expenses_path %>
+      EXPENSES
+    <% elsif current_page? expensive_expenses_path %>
+      EXPENSES
     <% elsif current_page? new_user_group_entity_path %>
-      ADD TRANSACTION
-    <% elsif current_page? user_group_entity_path %>
-      TRANSACTION DETAILS
+      ADD EXPENSE
     <% end %>
   </p>
   <section>
@@ -39,6 +55,12 @@
     <% elsif current_page? user_groups_path %>
       <%= fa_icon "search", class: "pointer" %>
     <% elsif current_page? user_group_entities_path %>
+      <%= fa_icon "search", class: "pointer" %>
+    <% elsif current_page? recent_expenses_path %>
+      <%= fa_icon "search", class: "pointer" %>
+    <% elsif current_page? ancient_expenses_path %>
+      <%= fa_icon "search", class: "pointer" %>
+    <% elsif current_page? expensive_expenses_path %>
       <%= fa_icon "search", class: "pointer" %>
     <% end %>
   </section>

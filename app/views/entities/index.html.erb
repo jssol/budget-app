@@ -1,12 +1,18 @@
 <section class="entities-index-page">
   <nav class="entities-nav">
     <ul class="entities-nav-list">
-      <li class="entities-nav-list-item">
+      <li class="entities-nav-list-item" id="all-expenses">
         <%= link_to "All", user_group_entities_path %>
       </li>
-      <li class="entities-nav-list-item">Most recent</li>
-      <li class="entities-nav-list-item">Most ancient</li>
-      <li class="entities-nav-list-item">Most expensive</li>
+      <li class="entities-nav-list-item" id="recent-expenses">
+        <%= link_to "Most recent", recent_expenses_path %>
+      </li>
+      <li class="entities-nav-list-item" id="ancient-expenses">
+        <%= link_to "Most ancient", ancient_expenses_path %>
+      </li>
+      <li class="entities-nav-list-item" id="expensive-expenses">
+        <%= link_to "Most expensive", expensive_expenses_path %>
+      </li>
     </ul>
   </nav>
   <% if @entities.empty? %>
