@@ -63,3 +63,11 @@
   margin-top: 1rem;
   border: 3px dashed var(--primary-color);
 }
+
+#icon-filename {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-family: 'Proxima Nova Bold', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 90%;
+  align-self: center;
+}

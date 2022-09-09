@@ -1,6 +1,10 @@
 class GroupsController < ApplicationController
   def index
-    @groups = current_user.groups.includes(:entities).all
+    @groups = Group.where(user_id: current_user.id)
+  end
+
+  def show
+    redirect_to user_group_entities_path(user_id: current_user.id, group_id: params[:id])
   end
 
   def new
@@ -10,6 +14,16 @@ class GroupsController < ApplicationController
     end
   end
 
+  def create
+    @group = current_user.groups.new(group_params)
+    if @group.save
+      flash[:notice] = 'Group created successfully'
+      redirect_to user_groups_path(current_user.id)
+    else
+      flash[:error] = 'Group could not be created'
+      render :new, locals: { group: @group }
+    end
+  end
 
   private
 

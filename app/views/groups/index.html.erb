@@ -1,8 +1,9 @@
 <section class="groups-index-page">
   <section class= "groups-container">
     <%= @groups.each do |group| %>
-      <%= link_to user_group_path(group), class: "user-group" do %>
+      <%= link_to user_group_path(id: group.id), class: "user-group" do %>
         <%= group.name %>
+        <%= image_tag group.icon %>
       <% end %>
     <% end %>
   </section>

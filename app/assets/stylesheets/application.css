@@ -477,7 +477,7 @@ template {
 .flash-popup {
   width: 100%;
   position: fixed;
-  top: 2em;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -487,8 +487,13 @@ template {
   text-align: center;
   padding: 1rem;
   border: 2px solid;
-  color: var(--primary-color);
+  color: #fff;
+  background-color: var(--secondary-color);
   border-color: currentColor;
   border-left: none;
   border-right: none;
+}
+
+.pointer {
+  cursor: pointer;
 }
