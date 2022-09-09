@@ -1,0 +1,9 @@
+<%= form_with model: entity, url: user_group_entities_path, method: :post, local: true, scope: :entity, class: "add-icon-form" do |f| %>
+  <div class="field">
+    <%= f.text_field :name, required: true, placeholder: "Expense name", class: "field-input" %>
+  </div>
+  <div class="field">
+    <%= f.number_field :name, required: true, placeholder: "Expense amount", class: "field-input" %>
+  </div>
+  <%= f.submit "Add expense", class: "submit-group-button" %>
+<% end %>

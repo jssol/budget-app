@@ -1,1 +1,21 @@
-<h1>User group entities page</h1>
+<section class="entities-index-page">
+  <nav class="entities-nav">
+    <ul class="entities-nav-list">
+      <li class="entities-nav-list-item">
+        <%= link_to "All", user_group_entities_path %>
+      </li>
+      <li class="entities-nav-list-item">Most recent</li>
+      <li class="entities-nav-list-item">Most ancient</li>
+      <li class="entities-nav-list-item">Most expensive</li>
+    </ul>
+  </nav>
+  <% if @entities.empty? %>
+    <p class="no-expense">No expenses yet!</p>
+  <% end %>
+  <section class= "groups-container">
+    <% @entities.each do |entity| %>
+       <p><%= entity.name %></p>
+    <% end %>
+  </section>
+  <%= link_to "Add new expense", new_user_group_entity_path, class: "add-group-button" %>
+</section>
