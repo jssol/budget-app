@@ -27,7 +27,7 @@
     <% elsif current_page? new_user_registration_path %>
       <button type="submit" form="new_user" value="Next">Next</button>
     <% elsif current_page? user_groups_path || user_group_entities_path %>
-      <%= fa_icon "search" %>
+      <%= fa_icon "search", class: "pointer" %>
     <% end %>
   </section>
 </header>
