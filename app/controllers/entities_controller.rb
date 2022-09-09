@@ -31,19 +31,25 @@ class EntitiesController < ApplicationController
   def most_recent
     @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('created_at DESC')
       .limit(5)
-    render :index
+    respond_to do |format|
+      format.html { render :index, locals: { entities: @entities, total_expenses: } }
+    end
   end
 
   def most_ancient
     @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('created_at ASC')
       .limit(5)
-    render :index
+    respond_to do |format|
+      format.html { render :index, locals: { entities: @entities, total_expenses: } }
+    end
   end
 
   def most_expensive
     @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('amount DESC')
       .limit(5)
-    render :index
+    respond_to do |format|
+      format.html { render :index, locals: { entities: @entities, total_expenses: } }
+    end
   end
 
   def total_expenses
