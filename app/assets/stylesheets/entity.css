@@ -53,3 +53,32 @@
   font-size: 1.5rem;
   margin-top: 50%;
 }
+
+.entities-table {
+  width: 100%;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.entities-table-head {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.entities-table-body {
+  width: 100%;
+  background-color: #60a6f7;
+  color: #fff;
+}
+
+.entities-table-row:nth-of-type(odd) {
+  background-color: #96c7ff;
+  color: #000;
+}
+
+.entities-table-col {
+  padding: 0.5rem;
+  text-align: center;
+}
