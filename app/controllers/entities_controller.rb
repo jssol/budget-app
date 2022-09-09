@@ -1,6 +1,9 @@
 class EntitiesController < ApplicationController
   def index
     @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id])
+    respond_to do |format|
+      format.html { render :index, locals: { entities: @entities, total_expenses: } }
+    end
   end
 
   def show
@@ -17,10 +20,10 @@ class EntitiesController < ApplicationController
   def create
     @entity = Entity.new(entity_params)
     if @entity.save
-      flash[:notice] = 'Transaction added successfully'
+      flash[:notice] = 'Expense added successfully'
       redirect_to user_group_entities_path(current_user.id)
     else
-      flash[:error] = 'Transaction could not be added'
+      flash[:error] = 'Expense could not be added'
       render :new, locals: { entity: @entity }
     end
   end
@@ -41,6 +44,10 @@ class EntitiesController < ApplicationController
     @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('amount DESC')
       .limit(5)
     render :index
+  end
+
+  def total_expenses
+    @amount = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).sum(:amount)
   end
 
   private
