@@ -1,9 +1,14 @@
 <section class="groups-index-page">
   <section class= "groups-container">
-    <%= @groups.each do |group| %>
+    <% @groups.each do |group| %>
       <%= link_to user_group_path(id: group.id), class: "user-group" do %>
-        <%= group.name %>
-        <%= image_tag group.icon %>
+        <div>
+          <%= image_tag group.icon %>
+        </div>
+        <div>
+          <h3><%= group.name %></h3>
+          <p>Total expenses: <span class="amount">$<%= group.total_expenses %></span></p>
+        </div>
       <% end %>
     <% end %>
   </section>
