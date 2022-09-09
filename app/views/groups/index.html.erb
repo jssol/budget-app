@@ -1,4 +1,7 @@
 <section class="groups-index-page">
+  <% if @groups.empty? %>
+      <p class="no-expense">No groups yet!</p>
+  <% end %>
   <section class= "groups-container">
     <% @groups.each do |group| %>
       <%= link_to user_group_path(id: group.id), class: "user-group" do %>
