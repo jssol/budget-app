@@ -6,11 +6,11 @@
           <%= fa_icon "chevron-left" %>
         <% end %>
       <% elsif current_page? destroy_user_session_path %>
-      <% elsif current_page? user_groups_path %>
-        <button type="button" class="hamburger-button">
-          <%= fa_icon "bars", class: "hamburger" %>
-        </button>
       <% elsif current_page? user_path(current_user.id) %>
+        <%= link_to :back do %>
+          <%= fa_icon "chevron-left" %>
+        <% end %>
+      <% elsif current_page? user_groups_path %>
         <button type="button" class="hamburger-button">
           <%= fa_icon "bars", class: "hamburger" %>
         </button>
@@ -39,8 +39,9 @@
           <%= fa_icon "chevron-left" %>
         <% end %>
       <% end %>
-    <% else%>
-      <%= link_to :back do %>
+    <% end %>
+    <% if !user_signed_in? %>
+      <%= link_to root_path do %>
         <%= fa_icon "chevron-left" %>
       <% end %>
     <% end %>
@@ -84,4 +85,18 @@
       <%= fa_icon "search", class: "pointer" %>
     <% end %>
   </section>
+  <% if user_signed_in? %>
+    <nav class="nav-bar">
+      <button type="button" class="hamburger-closer">
+        <%= fa_icon "times" %>
+      </button>
+      <ul class="nav-bar-list">
+        <li>
+          <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "logout-button nav-bar-item" %>
+        </li>
+        <li><%= link_to "Profile", user_path(current_user.id), class: "nav-bar-item" %></li>
+        <li><%= link_to "Home", user_groups_path(user_id: current_user.id), class: "nav-bar-item" %></li>
+      </ul>
+    <nav>
+  <% end %>
 </header>

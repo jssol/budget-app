@@ -14,9 +14,9 @@
     <% if !current_page? root_path %>
       <%= render 'layouts/shared/header' %>
     <% end %>
-    <% flash.each do |name, msg| -%>
+    <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "#{name} flash-popup" %>
-    <% end -%>
+    <% end %>
     <main class="main">
       <%= yield %>
     </main>

@@ -2,7 +2,6 @@
   <% if @groups.empty? %>
       <p class="no-expense">No groups yet!</p>
   <% end %>
-  <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "logout-button" %>
   <section class= "groups-container">
     <% @groups.each do |group| %>
       <%= link_to user_group_path(id: group.id), class: "user-group" do %>
