@@ -1,26 +1,32 @@
 <header class="header">
   <section>
-    <% if current_page? user_groups_path %>
-      <button type="button" class="hamburger-button">
-        <%= fa_icon "bars", class: "hamburger" %>
-      </button>
-    <% elsif current_page? user_group_entities_path %>
-      <button type="button" class="hamburger-button">
-        <%= fa_icon "bars", class: "hamburger" %>
-      </button>
-    <% elsif current_page? recent_expenses_path %>
-      <button type="button" class="hamburger-button">
-        <%= fa_icon "bars", class: "hamburger" %>
-      </button>
-    <% elsif current_page? ancient_expenses_path %>
-      <button type="button" class="hamburger-button">
-        <%= fa_icon "bars", class: "hamburger" %>
-      </button>
-    <% elsif current_page? expensive_expenses_path %>
-      <button type="button" class="hamburger-button">
-        <%= fa_icon "bars", class: "hamburger" %>
-      </button>
-    <% else %>
+    <% if user_signed_in? %>
+      <% if current_page? user_groups_path %>
+        <button type="button" class="hamburger-button">
+          <%= fa_icon "bars", class: "hamburger" %>
+        </button>
+      <% elsif current_page? user_group_entities_path %>
+        <button type="button" class="hamburger-button">
+          <%= fa_icon "bars", class: "hamburger" %>
+        </button>
+      <% elsif current_page? recent_expenses_path %>
+        <button type="button" class="hamburger-button">
+          <%= fa_icon "bars", class: "hamburger" %>
+        </button>
+      <% elsif current_page? ancient_expenses_path %>
+        <button type="button" class="hamburger-button">
+          <%= fa_icon "bars", class: "hamburger" %>
+        </button>
+      <% elsif current_page? expensive_expenses_path %>
+        <button type="button" class="hamburger-button">
+          <%= fa_icon "bars", class: "hamburger" %>
+        </button>
+      <% else %>
+        <%= link_to :back do %>
+          <%= fa_icon "chevron-left" %>
+        <% end %>
+      <% end %>
+    <% else%>
       <%= link_to :back do %>
         <%= fa_icon "chevron-left" %>
       <% end %>
