@@ -14,6 +14,12 @@
 }
 
 @font-face {
+  font-family: "Advertising Script Bold";
+  src: url('./Advertising_Script_Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "Proxima Nova Thin";
   src: url('./Proxima_Nova_Thin.otf') format('opentype');
 }
