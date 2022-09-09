@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "homes#index"
 
-  get '/users/:user_id/groups/:group_id/entities/most_recent', to: 'entities#most_recent', as: 'recent_expenses'
-  get '/users/:user_id/groups/:group_id/entities/most_ancient', to: 'entities#most_ancient',  as: 'ancient_expenses'
-  get '/users/:user_id/groups/:group_id/entities/most_expensive', to: 'entities#most_expensive', as: 'expensive_expenses'
+  get '/users/:user_id/groups/:group_id/recent_entities', to: 'entities#most_recent', as: 'recent_expenses'
+  get '/users/:user_id/groups/:group_id/ancient_entities', to: 'entities#most_ancient',  as: 'ancient_expenses'
+  get '/users/:user_id/groups/:group_id/expensive_entities', to: 'entities#most_expensive', as: 'expensive_expenses'
 
   resources :users, only: [:show] do
     resources :groups, only: [:index, :show, :create, :new] do
