@@ -1,7 +1,7 @@
-const iconInput = document.querySelector('.group_icon');
-const iconFilename = document.getElementById('icon-filename');
+const iconInput = document.getElementById("group_icon");
+const iconFilename = document.getElementById("icon-filename");
 
-iconInput.addEventListener('change', (e) => {
+iconInput.addEventListener("change", (e) => {
   const filename = iconInput.files[0].name;
-  iconFilename.textContent = `Icon: ${filename}`;
+  iconFilename.textContent = `Filename: ${filename}`;
 });
