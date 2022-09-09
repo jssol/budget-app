@@ -4,7 +4,7 @@ class EntitiesController < ApplicationController
   end
 
   def show
-    redirect_to user_group_entities_path(user_id: current_user.id, group_id: params[:id])
+    @entity = Entity.find(params[:id])
   end
 
   def new
@@ -26,15 +26,21 @@ class EntitiesController < ApplicationController
   end
 
   def most_recent
-    @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('created_at DESC').limit(5)
+    @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('created_at DESC')
+      .limit(5)
+    render :index
   end
 
   def most_ancient
-    @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('created_at ASC').limit(5)
+    @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('created_at ASC')
+      .limit(5)
+    render :index
   end
 
   def most_expensive
-    @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('amount DESC').limit(5)
+    @entities = Entity.where(author_id: current_user.id).where(group_id: params[:group_id]).order('amount DESC')
+      .limit(5)
+    render :index
   end
 
   private
