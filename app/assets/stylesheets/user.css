@@ -1,0 +1,32 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 10rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 5px solid currentColor;
+  margin: 2rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 3);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.bold {
+  font-family: 'Proxima Nova Bold', Roboto, sans-serif;
+}
