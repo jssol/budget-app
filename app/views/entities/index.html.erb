@@ -1,0 +1,45 @@
+<section class="entities-index-page">
+  <nav class="entities-nav">
+    <ul class="entities-nav-list">
+      <li class="entities-nav-list-item" id="all-expenses">
+        <%= link_to "All", user_group_entities_path %>
+      </li>
+      <li class="entities-nav-list-item" id="recent-expenses">
+        <%= link_to "Most recent", recent_expenses_path %>
+      </li>
+      <li class="entities-nav-list-item" id="ancient-expenses">
+        <%= link_to "Most ancient", ancient_expenses_path %>
+      </li>
+      <li class="entities-nav-list-item" id="expensive-expenses">
+        <%= link_to "Most expensive", expensive_expenses_path %>
+      </li>
+    </ul>
+  </nav>
+  <% if entities.empty? %>
+    <p class="no-expense">No expenses yet!</p>
+  <% end %>
+  <section class= "groups-container">
+    <% if !entities.empty? %>
+      <p>Total expenses: <span class="amount">$<%= total_expenses %></span></p>
+      <table class="entities-table">
+        <thead class="entities-table-head">
+          <tr>
+            <th class="entities-table-col">Date</th>
+            <th class="entities-table-col">Product</th>
+            <th class="entities-table-col">Amount($)</th>
+          </tr>
+        </thead>
+        <tbody class="entities-table-body">
+          <% entities.each do |entity| %>
+            <tr class="entities-table-row">
+              <th class="entities-table-col"><%= entity.created_at.strftime("%d-%b-%y") %></th>
+              <th class="entities-table-col"><%= entity.name %></th>
+              <th class="entities-table-col"><%= entity.amount %></th>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </section>
+  <%= link_to "Add new expense", new_user_group_entity_path, class: "add-group-button" %>
+</section>

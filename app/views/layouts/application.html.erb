@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wise Fin</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="body">
+    <% if !current_page? root_path %>
+      <%= render 'layouts/shared/header' %>
+    <% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "#{name} flash-popup" %>
+    <% end %>
+    <main class="main">
+      <%= yield %>
+    </main>
+  </body>
+</html>
