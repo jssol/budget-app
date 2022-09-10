@@ -16,6 +16,10 @@
   font-size: 1.5rem;
 }
 
+.hamburger-closer {
+  font-size: 2rem;
+}
+
 .nav-open .hamburger {
   transition: all 150ms ease-in-out;
 }

@@ -60,6 +60,10 @@
   transition: all ease-in-out 150ms;
 }
 
+.nav-open .add-group-button {
+  display: none;
+}
+
 #group_icon {
   display: none;
 }
