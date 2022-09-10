@@ -13,6 +13,8 @@ A mobile web application where users can manage their budget: they have a list o
 
 ## [Go live](https://wise-fin.herokuapp.com/)
 
+## [Video presentation](https://www.loom.com/share/1b0d0d54c08845a68623f01d2b2c4bc1)
+
 ## Getting Started
 
 You can get a local copy up and running following these simple steps.
