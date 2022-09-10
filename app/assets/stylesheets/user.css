@@ -30,3 +30,30 @@
 .bold {
   font-family: 'Proxima Nova Bold', Roboto, sans-serif;
 }
+
+.update-button {
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: 'Proxima Nova Bold', Roboto, sans-serif;
+  cursor: pointer;
+}
+
+.subtitle {
+  color: var(--primary-color);
+  margin-left: 1rem;
+}
+
+.delete-button {
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  background-color: #f00;
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: 'Proxima Nova Bold', Roboto, sans-serif;
+  cursor: pointer;
+}
