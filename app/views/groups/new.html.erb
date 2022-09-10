@@ -1,0 +1,12 @@
+<%= form_with model: group, url: user_groups_path, method: :post, local: true, scope: :group, class: "add-icon-form" do |f| %>
+  <div class="field">
+    <%= f.text_field :name, required: true, placeholder: "Group name", class: "field-input" %>
+  </div>
+  <%= f.label :icon, class:"icon-field-label" do %>
+    <%= fa_icon "cloud-upload" %>
+    <p>Select a group icon</p>
+    <%= f.file_field :icon, required: true %>
+  <% end %>
+  <div id="icon-filename"></div>
+  <%= f.submit "Add group", class: "submit-group-button" %>
+<% end %>

@@ -7,12 +7,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-    <% end -%>
-    <%= yield %>
+  <body class="body">
+    <% if !current_page? root_path %>
+      <%= render 'layouts/shared/header' %>
+    <% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "#{name} flash-popup" %>
+    <% end %>
+    <main class="main">
+      <%= yield %>
+    </main>
   </body>
 </html>

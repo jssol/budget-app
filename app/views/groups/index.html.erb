@@ -1,0 +1,19 @@
+<section class="groups-index-page">
+  <% if @groups.empty? %>
+      <p class="no-expense">No groups yet!</p>
+  <% end %>
+  <section class= "groups-container">
+    <% @groups.each do |group| %>
+      <%= link_to user_group_path(id: group.id), class: "user-group" do %>
+        <div class="image-container">
+          <%= image_tag group.icon, class: "group-icon" %>
+        </div>
+        <div>
+          <h3><%= group.name %></h3>
+          <p>Total expenses: <span class="amount">$<%= group.total_expenses %></span></p>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+  <%= link_to "Add new group", new_user_group_path, class: "add-group-button" %>
+</section>

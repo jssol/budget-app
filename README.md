@@ -11,7 +11,7 @@ A mobile web application where users can manage their budget: they have a list o
 - [x] Linter: [Rubocop](https://rubocop.org/)
 - [x] VS Code
 
-## [Go live](https://woomii.herokuapp.com/)
+## [Go live](https://wise-fin.herokuapp.com/)
 
 ## Getting Started
 

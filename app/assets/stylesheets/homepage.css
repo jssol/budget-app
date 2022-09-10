@@ -1,0 +1,79 @@
+.homepage-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#brand-logo {
+  font-family: 'Advertising Script Bold', 'Caveat', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  justify-self: center;
+  animation-duration: 1500ms;
+  animation-name: logo-animation;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.homepage-links-container {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  width: 80%;
+}
+
+.homepage-links {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  animation-duration: 1500ms;
+  animation-name: links-animation;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.log-in-link {
+  background-color: var(--primary-color);
+  color: #fff;
+  animation-delay: 150ms;
+}
+
+.sign-up-link {
+  color: var(--primary-color);
+  animation-delay: 250ms;
+}
+
+@keyframes logo-animation {
+  from {
+    margin-top: 3em;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes links-animation {
+  from {
+    display: none;
+    background-color: transparent;
+    margin-top: 3em;
+    opacity: 0;
+  }
+
+  to {
+    display: block;
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
+  }
+}
