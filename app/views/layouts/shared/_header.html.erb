@@ -5,7 +5,6 @@
         <%= link_to :back do %>
           <%= fa_icon "chevron-left" %>
         <% end %>
-      <% elsif current_page? destroy_user_session_path %>
       <% elsif current_page? user_path(current_user.id) %>
         <%= link_to :back do %>
           <%= fa_icon "chevron-left" %>
@@ -46,43 +45,11 @@
       <% end %>
     <% end %>
   </section>
-  <p class="page-title">
-    <% if current_page? new_user_session_path %>
-      LOGIN
-    <% elsif current_page? new_user_registration_path %>
-      REGISTER
-    <% elsif current_page? edit_user_registration_path %>
-      EDIT PROFILE
-    <% elsif current_page? user_path(current_user.id) %>
-      PROFILE
-    <% elsif current_page? user_groups_path %>
-      GROUPS
-    <% elsif current_page? new_user_group_path %>
-      ADD GROUP
-    <% elsif current_page? user_group_entities_path %>
-      EXPENSES
-    <% elsif current_page? recent_expenses_path %>
-      EXPENSES
-    <% elsif current_page? ancient_expenses_path %>
-      EXPENSES
-    <% elsif current_page? expensive_expenses_path %>
-      EXPENSES
-    <% elsif current_page? new_user_group_entity_path %>
-      ADD EXPENSE
-    <% end %>
-  </p>
   <section>
     <% if current_page? new_user_session_path %>
       <button type="submit" form="new_user" value="Log In">Log In</button>
     <% elsif current_page? new_user_registration_path %>
       <button type="submit" form="new_user" value="Next">Next</button>
-    <% elsif current_page? edit_user_registration_path %>
-    <% elsif current_page? user_path(current_user.id) %>
-      <%= link_to edit_user_registration_path do %>
-        <%= fa_icon "pencil" %>
-      <% end %>
-    <% elsif current_page? user_groups_path %>
-      <%= fa_icon "search", class: "pointer" %>
     <% end %>
   </section>
   <% if user_signed_in? %>
