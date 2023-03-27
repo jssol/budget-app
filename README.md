@@ -35,11 +35,11 @@ In the terminal, go to your file directory and run this command.
 > Clone the repository
 
 ```bash
-git clone https://github.com/Baroka-wp/recipe-app
+git clone https://github.com/jssol/budget-app
 ```
 
 ```bash
-cd recipe-app
+cd budget-app
 ```
 
 > Install Gemfile
